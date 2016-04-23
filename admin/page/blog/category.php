@@ -61,8 +61,8 @@ $category = mysqli_query($conn,"select * from category order by id desc");
                               <tr>
                                   <td><?php echo $row_category["category_name"] ?></td>
                                   <td><span class="<?php echo $row_category["icon"] ?>"></span> <?php echo $row_category["icon"] ?></td>
-                                  <td class="center"><a href="index.php?category-update=<?php echo $row_category["id"] ?>" class="btn btn-primary btn-xs" type="button">Update</a></td>
-                                  <td class="center"><a href="index.php?category-delete=<?php echo $row_category["id"] ?>" class="btn btn-primary btn-xs" type="button">Delete</a></td>
+                                  <td class="center"><a href="index.php?category-update=<?php echo $row_category["id"] ?>" class="btn btn-danger btn-xs" type="button">Update</a></td>
+                                  <td class="center"><a href="index.php?category-delete=<?php echo $row_category["id"] ?>" class="btn btn-danger btn-xs" type="button">Delete</a></td>
                               </tr>
                             <?php } ?>
                           <?php } ?>

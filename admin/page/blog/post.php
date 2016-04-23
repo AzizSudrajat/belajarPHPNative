@@ -103,8 +103,8 @@ $post = mysqli_query($conn,"select post.*, category.category_name from post, cat
                                     <img src="../upload/<?php echo $row_post["image"] ?>" width="88" class="img-responsive" />
                                   <?php } ?>
                                 </td>
-                                <td class="center"><a href="index.php?post-update=<?php echo $row_post["id"] ?>" class="btn btn-primary btn-xs" type="button">Update</a></td>
-                                <td class="center"><a href="index.php?post-delete=<?php echo $row_post["id"] ?>" class="btn btn-primary btn-xs" type="button">Delete</a></td>
+                                <td class="center"><a href="index.php?post-update=<?php echo $row_post["id"] ?>" class="btn btn-danger btn-xs" type="button">Update</a></td>
+                                <td class="center"><a href="index.php?post-delete=<?php echo $row_post["id"] ?>" class="btn btn-danger btn-xs" type="button">Delete</a></td>
                             </tr>
                             <?php } ?>
                           <?php } ?>

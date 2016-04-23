@@ -7,5 +7,5 @@
     <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <link href="css/plugins/timeline/timeline.css" rel="stylesheet" />
     <link href="css/sb-admin.css" rel="stylesheet" />
-    <link href="asset/favicon.ico" type="image/x-icon" rel="Shortcut Icon" />
+    <link href="asset/lala.ico" type="image/x-icon" rel="Shortcut Icon" />
 </head>

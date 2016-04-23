@@ -1,14 +1,14 @@
-a {color: #4285F4}
+a {color: #992020}
 a:hover {text-decoration: none; color: #333333}
 
-body {background: #4285F4}
+body {background: #992020}
 .wrapper {background: #FFFFFF}
 
 .navbar {margin-bottom: 0}
 .navbar-default {border: none}
 .navbar-brand img {width: 20px; height: 20px}
 
-header {background: #4285F4; padding: 40px 0; margin-bottom: 20px;}
+header {background: #992020; padding: 40px 0; margin-bottom: 20px;}
 header h1 {margin: 0}
 header h1 a {color: #FFFFFF; font-size: 50px;}
 header h1 a:hover {color: #FFFFFF; text-decoration: none;}
@@ -25,7 +25,7 @@ aside ul li {margin-bottom: 10px;}
 .latest-comments li {list-style: none;}
 
 .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {background-color: #4285F4; border-color: #4285F4;}
-.pagination > li > a, .pagination > li > span {color: #4285F4}
+.pagination > li > a, .pagination > li > span {color: #992020}
 .pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {color: #333333}
 
 footer {padding: 20px 0;}

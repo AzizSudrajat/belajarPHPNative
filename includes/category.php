@@ -21,7 +21,7 @@ and post.category_id = '$category_id' order by id desc limit $per_page offset $o
   <?php while($row=mysqli_fetch_array($query)) { ?>
     <div class="row latest-post">
       <div class="col-md-3">
-        <img src="images/<?php echo $row["image"]?>" class="img-responsive btn-block">
+        <img src="upload/<?php echo $row["image"]?>" class="img-responsive btn-block">
       </div>
       <div class="col-md-9">
         <h2><a href="index.php?detail=<?php echo $row["id"]?>"><?php echo $row["title"]?></a></h2>
@@ -30,7 +30,8 @@ and post.category_id = '$category_id' order by id desc limit $per_page offset $o
           <span class="<?php echo $row["icon"]?>" aria-hidden="true">
           </span> <?php echo $row["category_name"]?></a> - <?php echo tgl_indonesia($row["date"])?>
       </div>
-        <p><?php echo $row["description"]?></p>
+        <p><?php echo substr($row["description"], 0, 200)?> ...</p>
+        <p><a href="index.php?detail=<?php echo $row["id"]?>" class="btn btn-danger">Read More</a></p>
       </div>
     </div>
   <?php } ?>

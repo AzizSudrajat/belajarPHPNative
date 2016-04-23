@@ -33,7 +33,7 @@ $query = mysqli_query($conn, "select post.*, category.category_name, category.ic
           </span> <?php echo $row["category_name"]?></a> - <?php echo tgl_indonesia($row["date"])?>
       </div>
         <p><?php echo substr($row["description"], 0, 200)?> ...</p>
-        <p><a href="index.php?detail=<?php echo $row["id"]?>" class="btn btn-primary">Read More</a></p>
+        <p><a href="index.php?detail=<?php echo $row["id"]?>" class="btn btn-danger">Read More</a></p>
       </div>
     </div>
   <?php } ?>
