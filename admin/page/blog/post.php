@@ -7,7 +7,6 @@ if(isset($_POST["submit"])){
   $date = date("Y-m-d H-i-s");
 
   $file_name = $_FILES["file"]["name"];
-  $file_name_exp = explode(".", $file_name);
   $temp_name = $_FILES["file"]["tmp_name"];
   $destination = '../upload/';
   $move = move_uploaded_file($temp_name,$destination.$file_name);

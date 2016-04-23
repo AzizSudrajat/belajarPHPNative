@@ -5,7 +5,7 @@ if(isset($_POST["submit"])){
   $name = $_POST["name"];
   $comment = $_POST["comment"];
   $date = date("Y-m-d H:i:s");
-  mysqli_query($conn, "insert into comment values('','$post_id','$name','$comment','0','$date')");
+  mysqli_query($conn, "insert into comment values('','$post_id','$name','$comment','1','$date')");
   header("location:index.php?detail=$post_id&success-comment#success");
 }
 
@@ -30,7 +30,7 @@ $data = mysqli_num_rows($comment);
     </div>
     <h1><?php echo $row_detail["title"] ?></h1>
     <img src="upload/<?php echo $row_detail["image"] ?>" class="img-responsive btn-block">
-    <p><?php echo $row_detail["description"] ?></p>
+    <p class="text-justify"><?php echo $row_detail["description"] ?></p>
     <!-- Komentar -->
     <div class="panel panel-default">
       <div class="panel-heading">

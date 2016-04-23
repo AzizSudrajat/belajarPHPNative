@@ -7,11 +7,10 @@ if(isset($_POST["update"])){
   $description = $_POST["editor1"];
 
   $file_name = $_FILES["file"]["name"];
-  $tmp_name = $_FILES["file"]["tmp_name"];
+  $temp_name = $_FILES["file"]["tmp_name"];
   if($file_name=="" || empty($file_name)){
     mysqli_query($conn,"update post set category_id = '$category_id', title='$title', description='$description' where id='$id_post'");
   }else{
-    move_uploaded_file($tmp_name,"../images/".$file_name);
     mysqli_query($conn,"update post set category_id = '$category_id', title='$title', description='$description', image='$file_name' where id='$id_post'");
   }
   header("location:index.php?post");
@@ -74,7 +73,7 @@ $post = mysqli_query($conn,"select post.*, category.category_name from post, cat
                                 <?php if($row_edit["image"]==""){
                                   echo "<p><img src='../images/no-image.png' width='88' /></p>";
                                 }else{ ?>
-                                  <p><img src="../images/<?php echo $row_edit["image"] ?>" width="88"  alt="" /></p>
+                                  <p><img src="../upload/<?php echo $row_edit["image"] ?>" width="88"  alt="" /></p>
                                 <?php } ?>
                                 <input type="file" name="file" />
                             </div>
@@ -114,7 +113,7 @@ $post = mysqli_query($conn,"select post.*, category.category_name from post, cat
                                   <?php if($row_post["image"]==""){
                                     echo "<img src='asset/no-image.png' width='88' />";
                                   }else{ ?>
-                                    <img src="../images/<?php echo $row_post["image"] ?>" width="88" class="img-responsive" />
+                                    <img src="../upload/<?php echo $row_post["image"] ?>" width="88" class="img-responsive" />
                                   <?php } ?>
                                 </td>
                                 <td class="center"><a href="index.php?post-update=<?php echo $row_post["id"] ?>" class="btn btn-primary btn-xs" type="button">Update</a></td>

@@ -1,6 +1,6 @@
 <?php
 // varibale limit
-$total_data = mysqli_query($conn, "select * from comment order by id desc limit 3");
+$total_data = mysqli_query($conn, "select * from comment order by id desc limit 5");
 ?>
 
 <aside class="col-md-4">
@@ -13,7 +13,7 @@ $total_data = mysqli_query($conn, "select * from comment order by id desc limit 
           <?php if(mysqli_num_rows($total_data)) { ?>
             <?php while($row=mysqli_fetch_array($total_data)) { ?>
       		    <li>
-                <a href="index.php"><span class="glyphicon glyphicon-comment" aria-hidden="true">
+                <a href="index.php?detail=<?php echo $row["post_id"] ?>"><span class="glyphicon glyphicon-comment" aria-hidden="true">
                 </span> <strong><?php echo $row["name"] ?></strong>: <?php echo $row["reply"] ?></a>
               </li>
             <?php } ?>
