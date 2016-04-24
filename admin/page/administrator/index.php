@@ -2,7 +2,7 @@
 // simpan data
 if(isset($_POST["submit"])){
   $username = $_POST["username"];
-  $password = md5($_POST["password"]);
+  $password = $_POST["password"];
   mysqli_query($conn, "insert into admin values('','$username','$password')");
   header("location:index.php?administrator");
 }
@@ -62,8 +62,8 @@ $query = mysqli_query($conn, "select * from admin order by id desc");
                               <tr>
                                   <td><?php echo $row["username"] ?></td>
                                   <td><?php echo $row["password"] ?></td>
-                                  <td class="center"><a href="index.php?administrator-update=<?php echo $row["id"] ?>" class="btn btn-primary btn-xs" type="button">Update</a></td>
-                                  <td class="center"><a href="index.php?administrator-delete=<?php echo $row["id"] ?>" class="btn btn-primary btn-xs" type="button">Delete</a></td>
+                                  <td class="center"><a href="index.php?administrator-update=<?php echo $row["id"] ?>" class="btn btn-danger btn-xs" type="button">Update</a></td>
+                                  <td class="center"><a href="index.php?administrator-delete=<?php echo $row["id"] ?>" class="btn btn-danger btn-xs" type="button">Delete</a></td>
                               </tr>
                             <?php } ?>
                           <?php } ?>
